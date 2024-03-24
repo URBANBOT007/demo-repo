@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOT E-COMMERCE</title>
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <!--Font Awesome CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header class="header-style-two">
+        <!-- header-top -->
+        <nav class="navbar-one flex">
+            <div class="left flex">
+                <div class="ship-to flex">
+                    <span>Ship to</span>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="ico/ship_flag.png" alt=""> US/USD
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><img src="ico/australia.png" alt="">AUS/USD</a>
+                            <a class="dropdown-item" href="#"><img src="ico/bng.png" alt="">BNG/TK</a>
+                            <a class="dropdown-item" href="#"><img src="ico/india.png" alt="">IN/RP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- header-top-end -->
+        <!-- logo-area -->
+        <nav class="navbar-second flex">
+            <div class="logo"><a href="index.html"><span class="circle"><i class="ri-circle-fill"></i></span>.Bot</a>
+            </div>
+            <!-- search-area -->
+            <form id="search" method="get" class="cola -df" action="/catalog/" data-track-onsubmit="search">
+                <div class="find">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ic" width="18" height="18.07">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                    <input type="text" name="q" id="fi-q" placeholder="Search products, brands and categories"
+                        aria-label="Search" value="" autocomplete="off" required="">
+                    <button type="button" class="rst" aria-label="Reset"></button>
+                    <div class="sug"></div>
+                </div>
+                <button class="btn _prim _md -mls -fsh0">Search</button>
+            </form>
+            <!-- account,help & cart -->
+            <div class="col -df -j-bet -m -phn -i-ctr">
+                <div class="dpdw _pcent">
+                    <input id="dpdw-login" class="tgl" type="checkbox" role="button" aria-controls="dpdw-login-box"
+                        aria-haspopup="true" aria-label="Account">
+                    <label class="trig -df -i-ctr -fs16" for="dpdw-login">
+                        <span class="-fsh0 -mrs">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ia" width="20"
+                                height="20">
+                                <path
+                                    d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" />
+                            </svg>
+                        </span>
+                        Account
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="ia -mls -fsh0" width="18" height="18">
+                            <path
+                                d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                            </path>
+                        </svg>
+                    </label>
+                    <div class="box -r" role="menu" aria-labelledby="dpdw-login" id="dpdw-login-box">
+                        <div class="inbox">
+                            <div class="-pam -hr-bb">
+                                <a rel="nofollow" href="" class="btn _prim -fw _md">Sign In</a>
+                            </div>
+                            <a rel="nofollow" href="" class="-df -i-ctr -pas -hov-bg-gy05 -hov-m">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ia -mrm -fsh0"
+                                    width="20" height="20">
+                                    <path
+                                        d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" />
+                                </svg>My Account
+                            </a>
+                            <a rel="nofollow" href="" class="-df -i-ctr -pas -hov-bg-gy05 -hov-m">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="ia -mrm -fsh0" width="20" height="20">
+                                    <path
+                                        d="M18.0049 6.99979H21.0049C21.5572 6.99979 22.0049 7.4475 22.0049 7.99979V19.9998C22.0049 20.5521 21.5572 20.9998 21.0049 20.9998H3.00488C2.4526 20.9998 2.00488 20.5521 2.00488 19.9998V3.99979C2.00488 3.4475 2.4526 2.99979 3.00488 2.99979H18.0049V6.99979ZM4.00488 8.99979V18.9998H20.0049V8.99979H4.00488ZM4.00488 4.99979V6.99979H16.0049V4.99979H4.00488ZM15.0049 12.9998H18.0049V14.9998H15.0049V12.9998Z">
+                                    </path>
+                                </svg>Orders
+                            </a>
+                            <a rel="nofollow" href="" class="-df -i-ctr -pas -hov-bg-gy05 -hov-m">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ic -mrm -fsh0"
+                                    width="20" height="20">
+                                    <path
+                                        d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                                </svg>Saved Items
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dpdw _pcent">
+                    <input id="dpdw-help" class="tgl" type="checkbox" role="button" aria-controls="dpdw-help-box"
+                        aria-haspopup="true" aria-label="Help">
+                    <label class="trig -df -i-ctr -fs16" for="dpdw-help">
+                        <span class="-fsh0 -mrs">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ic" width="20"
+                                height="20">
+                                <path
+                                    d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                            </svg>
+                        </span>Help
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="ic -mls -fsh0" width="18" height="18">
+                            <path
+                                d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                            </path>
+                        </svg>
+                    </label>
+                    <div class="box -r" role="menu" aria-labelledby="dpdw-help" id="dpdw-help-box">
+                        <div class="inbox">
+                            <a href="" class="-df -i-ctr -phm -pv12 -hov-bg-gy05 -hov-m">Help Center</a>
+                            <a href="" class="-df -i-ctr -phm -pv12 -hov-bg-gy05 -hov-m">Place an order</a>
+                            <a href="" class="-df -i-ctr -phm -pv12 -hov-bg-gy05 -hov-m">Payment options</a>
+                            <a href="" class="-df -i-ctr -phm -pv12 -hov-bg-gy05 -hov-m">Track an order</a>
+                            <a href="" class="-df -i-ctr -phm -pv12 -hov-bg-gy05 -hov-m">Cancel an order</a>
+                            <a href="" class="-df -i-ctr -phm -pv12 -hov-bg-gy05 -hov-m">Returns &amp; Refunds</a>
+                            <div class="-tac -hr _hx2 -fs0 -pam">
+                                <button class="btn _prim _md _i -fw" data-btn-lc="true" data-track-onclick="true"
+                                    data-eventcategory="LiveChat" data-eventaction="open"
+                                    data-track-onclick-bound="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ic" width="24"
+                                        height="24" style="fill: white;">
+                                        <path
+                                            d="M168.2 384.9c-15-5.4-31.7-3.1-44.6 6.4c-8.2 6-22.3 14.8-39.4 22.7c5.6-14.7 9.9-31.3 11.3-49.4c1-12.9-3.3-25.7-11.8-35.5C60.4 302.8 48 272 48 240c0-79.5 83.3-160 208-160s208 80.5 208 160s-83.3 160-208 160c-31.6 0-61.3-5.5-87.8-15.1zM26.3 423.8c-1.6 2.7-3.3 5.4-5.1 8.1l-.3 .5c-1.6 2.3-3.2 4.6-4.8 6.9c-3.5 4.7-7.3 9.3-11.3 13.5c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c5.1 0 10.2-.3 15.3-.8l.7-.1c4.4-.5 8.8-1.1 13.2-1.9c.8-.1 1.6-.3 2.4-.5c17.8-3.5 34.9-9.5 50.1-16.1c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9zM144 272a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm144-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm80 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" />
+                                    </svg>
+                                    <span>Live Chat</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="-df -i-ctr -gy9 -hov-or5 -phs -fs16" href="/cart/">
+                    <span id="ci" class="-mrs -fs0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ic"
+                            width="24" height="24">
+                            <path
+                                d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z">
+                            </path>
+                        </svg>
+                    </span>Cart
+                </a>
+            </div>
+
+
+    </header>
+    <main>
+        <!-- Main-area -->
+        <div class="-mnar -mnarea">
+            <div class="-ftRW">
+                <a class="marea" href="index.html">Home</a>
+                <a class="marea" href="">About us</a>
+                <a class="mareas" href="">Electronics</a>
+                <a class="mareab" href="">Fashion</a>
+                <a class="marea" href="">Blog</a>
+                <a class="marea" href="">Hot Offers</a>
+            </div>
+        </div>
+        <div class="dd-container">
+                <div class="dd-content">
+                    <div class="_dd_section">
+                        <div class="_dd_items">
+                            <a class="_first-dd_links" href="">Laptops</a>
+                            <a class="_dd_links" href="">Mini Laptops and Netbooks</a>
+                            <a class="_dd_links" href="">Notebooks</a>
+                            <a class="_dd_links" href="">Ultrabooks</a>
+                            <a class="_dd_links" href="">Hybrid PCs</a>
+                            <a class="_dd_links" href="">Macbooks</a>
+                        </div>
+                        <div class="_dd_items">
+                            <a class="_first-dd_links" href="">Desktop and Monitors</a>  
+                            <a class="_dd_links" href="">CPUs</a>
+                            <a class="_dd_links" href="">All In Ones</a>
+                            <a class="_dd_links" href="">Monitors</a>
+                            <a class="_dd_links" href="">UPS</a>
+                            <a class="_dd_links" href="">Servers</a>
+                            <a class="_dd_links" href="">Desktop Bundles</a>
+                        </div>
+                        <div class="_dd_items">
+                            <a class="_first-dd_links" href="">Computing Accessories</a>   
+                            <a class="_dd_links" href="">Computer Peripherals</a>
+                            <a class="_dd_links" href="">Bags, Cases, Covers  &amp; Sleeves</a>
+                            <a class="_dd_links" href="">Laptop &amp; Desktop Accessories</a>
+                            <a class="_dd_links" href="">Storage Devices</a>
+                        </div>
+                        <div class="_dd_items">
+                            <a class="_first-dd_links" href="">Printers, Scanners &amp; Accessories</a>   
+                            <a class="_dd_links" href="">Printers </a>
+                            <a class="_dd_links" href="">Scanners</a>
+                            <a class="_dd_links" href="">Inks, Toners &amp; Cartridges</a>
+                        </div>
+                        <div class="_dd_items">
+                            <a class="_first-dd_links" href="">Wifi &amp; Networking</a>
+                            <a class="_dd_links" href="">Switches</a>
+                            <a class="_dd_links" href="">Routers</a>
+                            <a class="_dd_links"href="">Modems</a>
+                            <a class="_dd_links" href="">Networking Peripherals</a>
+                        </div>
+                        <div class="_dd_items">
+                            <a class="_first-dd_links" href="">PC Gaming</a>
+                            <a class="_dd_links" href="">PC Games</a>
+                            <a class="_dd_links" href="">PC Gaming Accessories</a>
+                        </div>
+                        <div class="_dd_items">
+                            <a class="_first-dd_links" href="">Software</a>
+                            <a class="_dd_links" href="">Office &amp; Business</a>
+                            <a class="_dd_links" href="">Operating Systems</a>
+                            <a class="_dd_links" href="">Security &amp;  Utilities</a>
+                        </div>
+                        <div class="_dd_items">
+                            <a class="_first-dd_links" href="">Projectors</a>
+                        </div>
+                    </div>
+                    <a class="elect_img-cont" href="">
+                        <img class="elect_pix" src="banner/mouse collection.jpg" style="height: 100%; width: 100%;">
+                    </a>
+                </div>
+        </div>
+        <div class="fash_container">
+            <div class="dd-content">
+                <div class="_dd_section">
+                    <div class="_dd_items">
+                        <a class="_first-dd_links"href="">Women's Wear</a>
+                        <a class="_dd_links" href="">Dresses</a>
+                        <a class="_dd_links" href="">Tops</a>
+                        <a class="_dd_links" href="">Trousers</a>
+                        <a class="_dd_links" href="">Jumpsuits &amp; Playsuits</a>
+                        <a class="_dd_links" href="">Suits &amp; Blazers</a>
+                        <a class="_dd_links" href="">Skirts</a>
+                        <a class="_dd_links" href="">Co-ordinates</a>
+                        <a class="_dd_links" href="">Lingerie &amp; Sleepwear</a>
+                        <a class="_dd_links" href="">Ready to Wear</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Women's Shoes</a>  
+                        <a class="_dd_links" href="">Ballerinas &amp; Flats</a>
+                        <a class="_dd_links" href="">Heels</a>
+                        <a class="_dd_links" href="">Sandals &amp; Slippers</a>
+                        <a class="_dd_links" href="">Wedges</a>
+                        <a class="_dd_links" href="">Sport Shoes</a>
+                        <a class="_dd_links" href="">Shoes &amp; Bags</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Women's Accessories</a>   
+                        <a class="_dd_links" href="">Bags</a>
+                        <a class="_dd_links" href="">Belts</a>
+                        <a class="_dd_links" href="">Purses &amp; Clutches</a>
+                        <a class="_dd_links" href="">Wallets</a>
+                        <a class="_dd_links" href="">Jewellery</a>
+                        <a class="_dd_links" href="">Hats &amp; Scarves</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Men's Wear</a>   
+                        <a class="_dd_links" href="">Shirts</a>
+                        <a class="_dd_links" href="">Polos</a>
+                        <a class="_dd_links" href="">T-Shirts</a>
+                        <a class="_dd_links" href="">Polos</a>
+                        <a class="_dd_links" href="">T-Shirts</a>
+                        <a class="_dd_links" href="">Jeans</a>
+                        <a class="_dd_links" href="">Trousers &amp; Shorts</a>
+                        <a class="_dd_links" href="">Suits, Blazers &amp; Jackets</a>
+                        <a class="_dd_links" href="">Pyjamas</a>
+                        <a class="_dd_links" href="">Jerseys</a>
+                        <a class="_dd_links" href="">Traditional Wear</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Men's Shoes</a>
+                        <a class="_dd_links" href="">Casual Shoes</a>
+                        <a class="_dd_links" href="">Formal Shoes</a>
+                        <a class="_dd_links"href="">Slippers &amp; Sandals</a>
+                        <a class="_dd_links" href="">Shoe Care &amp; Accessories</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Men's Accessories</a>
+                        <a class="_dd_links" href="">Belts &amp; Wallets</a>
+                        <a class="_dd_links" href="">Socks &amp; Underwear</a>
+                        <a class="_dd_links" href="">Caps &amp; Hats</a>
+                        <a class="_dd_links" href="">Jewellery</a>
+                        <a class="_dd_links" href="">Bags</a>
+                        <a class="_dd_links" href="">Ties &amp; Cufflinks</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Watches</a>
+                        <a class="_dd_links" href="">Men's Watches</a>
+                        <a class="_dd_links" href="">Women's Watches</a>
+                        <a class="_dd_links" href="">Unisex Watches</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Fashion Bundles</a>
+                        <a class="_dd_links" href="">Women's Fashion Bundles</a>
+                        <a class="_dd_links" href="">Men's Fashion Bundles</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Style Finder for Women</a>
+                        <a class="_dd_links" href="">Monochrome</a>
+                        <a class="_dd_links" href="">Floral</a>
+                        <a class="_dd_links" href="">Bold in black</a>
+                        <a class="_dd_links" href="">9 to 5 Chick</a>
+                        <a class="_dd_links" href="">Trending Now</a>
+                        <a class="_dd_links" href="">Red Hot</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Style Finder for Men</a>
+                        <a class="_dd_links" href="">Monochrome</a>
+                        <a class="_dd_links" href="">Prints</a>
+                        <a class="_dd_links" href="">Wardrobe Basics</a>
+                        <a class="_dd_links" href="">Men in Blue</a>
+                        <a class="_dd_links" href="">Business Look</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Plus Size</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Wedding Shop</a>
+                        <a class="_dd_links" href="">Women's Wedding Shop</a>
+                        <a class="_dd_links" href="">Men's Wedding Shop</a>
+                    </div>
+                    <div class="_dd_items">
+                        <a class="_first-dd_links" href="">Textiles</a>
+                    </div>
+                </div>
+                <a class="fash_img-cont" href="">
+                    <img class="fash_pix" src="banner/Geneva_Ice_ Rhinestone.jpg" style="height: 100%; width: 100%;">
+                </a>
+            </div>
+    </div>
+        <!-- carousel-area -->
+        <section class="slider-section">
+            <div id="sliderContainer">
+                <div class="slide"> <img src="banner/apple.jpg" alt="image1"> </div>
+                <div class="slide"> <img src="banner/Weekend.jpg" alt="image2"> </div>
+                <div class="slide"> <img src="banner/Frenzy.jpg" alt="image3"> </div>
+                <div class="slide"> <img src="banner/gamesconsole.jpg" alt="image4"> </div>
+            </div>
+        </section>
+
+        <!-- Slider navigation buttons -->
+        <div class="slider-nav">
+            <button class="slider-button" onclick="prevSlide()">&#10094;</button>
+            <button class="slider-button" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <!-- top-cat-banner-area -->
+        <div class="custom-container-two">
+            <div class="row justify-content-center">
+                <div class="container-top-cat">
+                    <div class="top-cat-banner-item mt-30">
+                        <a href="shop-left-sidebar.html"><img src="banner/top_cat_banner01.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="container-top-cat">
+                    <div class="top-cat-banner-item mt-30">
+                        <a href="shop-left-sidebar.html"><img src="banner/top_cat_banner02.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="container-top-cat">
+                    <div class="top-cat-banner-item mt-30">
+                        <a href="shop-left-sidebar.html"><img src="banner/top_cat_banner03.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- exclusive-collection-area -->
+        <div class="section-title text-center mb">
+            <span class="sub-title">exclusive collection</span>
+            <h2 class="title">best selling products</h2>
+        </div>
+        <!-- best-selling-products-->
+        <!-- swiper-slider-->
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
+            slides-per-view="3">
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/belly_rings.png">
+                        </div>
+                        <p class="detail">Belly Rings
+                            <a href="#" class="price">Price-$40</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/Women_shoulder_handbag.png">
+                        </div>
+                        <p class="detail">Women Shoulder Handbag
+                            <a href="#" class="price">Price-$20</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/Samsung_85 Inches_LED.png">
+                        </div>
+                        <p class="detail">Samsung 85 Inches LED, TV
+                            <a href="#" class="price">Price-$200</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/Apple iPhone_15 Pro_512GB_Blue Titanium.png">
+                        </div>
+                        <p class="detail">Apple iPhone 15 Pro 512GB Blue Titanium
+                            <a href="#" class="price">Price-$900</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/Apple Macbook Pro_M1_Chip.png">
+                        </div>
+                        <p class="detail">Apple Macbook Pro M1 Chip
+                            <a href="#" class="price">Price-$500</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/Outfit_For_Occasion.png">
+                        </div>
+                        <p class="detail">Outfit For Occasion
+                            <a href="#" class="price">Price-$50</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/Ladies_Casual_Sneakers.png">
+                        </div>
+                        <p class="detail">Ladies Casual Sneakers
+                            <a href="#" class="price">Price-$40</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/Men's Formal_Long_Sleeve_Shirt.png">
+                        </div>
+                        <p class="detail">Men's Formal Long Sleeve Shirt
+                            <a href="#" class="price">Price-$70</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="swiper-slide">
+                    <div class="slider-box">
+                        <p class="time">New!</p>
+                        <div class="img-box">
+                            <img src="Products/Women's_Skirt.png">
+                        </div>
+                        <p class="detail">Women's Skirt
+                            <a href="#" class="price">Price-$50</a>
+                        </p>
+                        <div class="cart">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+
+        <section class="deal-of-the-day theme-bg pt-100 pb-70">
+            <div class="custom-container-two">
+                <div class="row">
+                    <div class="custom-col-4">
+                        <div class="deal-of-day-banner mb-30">
+                            <a href="shop-left-sidebar.html"><img class="deal-image"
+                                    src="Deal of the day/Deal_of_the_day.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="custom-col-8">
+                        <div class="deal-day-top">
+                            <div class="deal-day-title">
+                                <h4 class="title">Deal Of The Day</h4>
+                            </div>
+                            <div class="view-all-deal">
+                                <a href="shop-left-sidebar.html"><i class="ri-drag-move-line"></i> View All</a>
+                            </div>
+                        </div>
+                        <div class="row deal-day-active slick-initialized slick-slider">
+                            <div class="slick-list draggable">
+                                <div class="slick-track"
+                                    style="opacity: 1; width: 4796px; transform: translate3d(-1744px, 0px, 0px); transition: transform 1000ms ease 0s;">
+                                    <div class="col-xl-3 slick-slide slick-cloned" style="width: 436px;" tabindex="-1"
+                                        data-slick-index="-1" id="" aria-hidden="true">
+                                        <div class="most-popular-viewed-item mb-30">
+                                            <div class="viewed-item-top">
+                                                <div class="most--popular--item--thumb mb-20">
+                                                    <a href="shop-details.html" tabindex="-1"><img
+                                                            src="Deal of the day/most_popular_02.jpg" alt=""></a>
+                                                </div>
+                                                <div class="super-deal-content">
+                                                    <h6><a href="shop-details.html" tabindex="-1"
+                                                            class="product-link">Vacuum Fashion Bag</a></h6>
+                                                    <p>US $ 17.00<span>{ 50% off }</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="viewed-item-bottom">
+                                                <ul>
+                                                    <li>Total Sold : 35</li>
+                                                    <li>Stocks : 3456</li>
+                                                </ul>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 35%;"
+                                                        aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="viewed-offer-time">
+                                                    <p><span>Hurry Up</span> Limited Time Offer</p>
+                                                    <div class="coming-time" data-countdown="2024/12/25">
+                                                        <div class="time-count day"><span>00</span>Day</div>
+                                                        <div class="time-count hour"><span>00</span>Hr</div>
+                                                        <div class="time-count min"><span>00</span>Min</div>
+                                                        <div class="time-count sec"><span>00</span>Sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 slick-slide" style="width: 436px;" tabindex="-1"
+                                        data-slick-index="0" aria-hidden="true">
+                                        <div class="most-popular-viewed-item mb-30">
+                                            <div class="viewed-item-top">
+                                                <div class="most--popular--item--thumb mb-20">
+                                                    <a href="shop-details.html" tabindex="-1"><img
+                                                            src="Deal of the day/Women's_sport_sneakers.jpg" alt=""></a>
+                                                </div>
+                                                <div class="super-deal-content">
+                                                    <h6><a href="shop-details.html" tabindex="-1"
+                                                            class="product-link">Vacuum Fashion Bag</a></h6>
+                                                    <p>US $ 49.00<span>{ 50% off }</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="viewed-item-bottom">
+                                                <ul>
+                                                    <li>Total Sold : 25</li>
+                                                    <li>Stocks : 3456</li>
+                                                </ul>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%;"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="viewed-offer-time">
+                                                    <p><span>Hurry Up</span> Limited Time Offer</p>
+                                                    <div class="coming-time" data-countdown="2024/12/25">
+                                                        <div class="time-count day"><span>00</span>Day</div>
+                                                        <div class="time-count hour"><span>00</span>Hr</div>
+                                                        <div class="time-count min"><span>00</span>Min</div>
+                                                        <div class="time-count sec"><span>00</span>Sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 slick-slide" style="width: 436px;" tabindex="-1"
+                                        data-slick-index="1" aria-hidden="true">
+                                        <div class="most-popular-viewed-item mb-30">
+                                            <div class="viewed-item-top">
+                                                <div class="most--popular--item--thumb mb-20">
+                                                    <a href="shop-details.html" tabindex="-1"><img
+                                                            src="Deal of the day/most_popular_02.jpg" alt=""></a>
+                                                </div>
+                                                <div class="super-deal-content">
+                                                    <h6><a href="shop-details.html" tabindex="-1"
+                                                            class="product-link">Vacuum Fashion Bag</a></h6>
+                                                    <p>US $ 17.00<span>{ 50% off }</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="viewed-item-bottom">
+                                                <ul>
+                                                    <li>Total Sold : 35</li>
+                                                    <li>Stocks : 3456</li>
+                                                </ul>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 35%;"
+                                                        aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="viewed-offer-time">
+                                                    <p><span>Hurry Up</span> Limited Time Offer</p>
+                                                    <div class="coming-time" data-countdown="2024/12/25">
+                                                        <div class="time-count day"><span>00</span>Day</div>
+                                                        <div class="time-count hour"><span>00</span>Hr</div>
+                                                        <div class="time-count min"><span>00</span>Min</div>
+                                                        <div class="time-count sec"><span>00</span>Sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 slick-slide" style="width: 436px;" tabindex="0"
+                                        data-slick-index="2" aria-hidden="true">
+                                        <div class="most-popular-viewed-item mb-30">
+                                            <div class="viewed-item-top">
+                                                <div class="most--popular--item--thumb mb-20">
+                                                    <a href="shop-details.html" tabindex="0"><img
+                                                            src="Deal of the day/most_popular_02.jpg" alt=""></a>
+                                                </div>
+                                                <div class="super-deal-content">
+                                                    <h6><a href="shop-details.html" tabindex="-1"
+                                                            class="product-link">Vacuum Fashion Bag</a></h6>
+                                                    <p>US $ 17.00<span>{ 50% off }</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="viewed-item-bottom">
+                                                <ul>
+                                                    <li>Total Sold : 35</li>
+                                                    <li>Stocks : 3456</li>
+                                                </ul>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 55%;"
+                                                        aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="viewed-offer-time">
+                                                    <p><span>Hurry Up</span> Limited Time Offer</p>
+                                                    <div class="coming-time" data-countdown="2024/12/25">
+                                                        <div class="time-count day"><span>00</span>Day</div>
+                                                        <div class="time-count hour"><span>00</span>Hr</div>
+                                                        <div class="time-count min"><span>00</span>Min</div>
+                                                        <div class="time-count sec"><span>00</span>Sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 slick-slide slick-current slick-active" style="width: 436px;"
+                                        tabindex="-1" data-slick-index="3" aria-hidden="false">
+                                        <div class="most-popular-viewed-item mb-30">
+                                            <div class="viewed-item-top">
+                                                <div class="most--popular--item--thumb mb-20">
+                                                    <a href="shop-details.html" tabindex="-1"><img
+                                                            src="Deal of the day/Women's_sport_sneakers.jpg" alt=""></a>
+                                                </div>
+                                                <div class="super-deal-content">
+                                                    <h6><a href="shop-details.html" tabindex="-1"
+                                                            class="product-link">Women Sports Sneakers</a></h6>
+                                                    <p>US $ 31.00<span>{ 50% off }</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="viewed-item-bottom">
+                                                <ul>
+                                                    <li>Total Sold : 35</li>
+                                                    <li>Stocks : 3456</li>
+                                                </ul>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 75%;"
+                                                        aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="viewed-offer-time">
+                                                    <p><span>Hurry Up</span> Limited Time Offer</p>
+                                                    <div class="coming-time" data-countdown="2024/12/25">
+                                                        <div class="time-count day"><span>00</span>Day</div>
+                                                        <div class="time-count hour"><span>00</span>Hr</div>
+                                                        <div class="time-count min"><span>00</span>Min</div>
+                                                        <div class="time-count sec"><span>00</span>Sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 slick-slide" style="width: 436px;" tabindex="-1"
+                                        data-slick-index="4" aria-hidden="true">
+                                        <div class="most-popular-viewed-item mb-30">
+                                            <div class="viewed-item-top">
+                                                <div class="most--popular--item--thumb mb-20">
+                                                    <a href="shop-details.html" tabindex="-1"><img
+                                                            src="Deal of the day/Geneva_Ice_ Rhinestone.jpg" alt=""></a>
+                                                </div>
+                                                <div class="super-deal-content">
+                                                    <h6><a href="shop-details.html" tabindex="-1"
+                                                            class="product-link">Geneva Ice Rhinestone</a></h6>
+                                                    <p>US $ 17.00<span>{ 50% off }</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="viewed-item-bottom">
+                                                <ul>
+                                                    <li>Total Sold : 35</li>
+                                                    <li>Stocks : 3456</li>
+                                                </ul>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 35%;"
+                                                        aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="viewed-offer-time">
+                                                    <p><span>Hurry Up</span> Limited Time Offer</p>
+                                                    <div class="coming-time" data-countdown="2024/12/25">
+                                                        <div class="time-count day"><span>00</span>Day</div>
+                                                        <div class="time-count hour"><span>00</span>Hr</div>
+                                                        <div class="time-count min"><span>00</span>Min</div>
+                                                        <div class="time-count sec"><span>00</span>Sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+        <!-- trending-this-week -->
+        <section class="trending-this-week-area pt-100 pb-55">
+            <div class="custom-container-two">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="deal-day-top">
+                            <div class="deal-day-title">
+                                <h4 class="title">Trending This Week</h4>
+                            </div>
+                            <div class="view-all-deal">
+                                <a href="shop-left-sidebar.html"><i class="ri-drag-move-line"></i> View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-md-4 col-sm-6">
+                        <div class="exclusive-item exclusive-item-three text-center mb-40">
+                            <div class="exclusive-item-thumb">
+                                <a href="shop-details.html">
+                                    <img src="Trending this week/Emfed-Flattering-Bodycon-Dress 1.jpg" alt=""
+                                        style="width: 100%; height: 100%;">
+                                    <img class="overlay-product-thumb"
+                                        src="Trending this week/Emfed-Flattering-Bodycon-Dress.jpg" alt=""
+                                        style="width: 100%; height: 100%;">
+                                </a>
+                                <ul class="action">
+                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="exclusive-item-content">
+                                <h5><a href="shop-details.html">Emfed Flattering Bodycon Dress</a></h5>
+                                <div class="exclusive--item--price">
+                                    <del class="old-price">$69.00</del>
+                                    <span class="new-price">$58.00</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-4 col-sm-6">
+                        <div class="exclusive-item exclusive-item-three text-center mb-40">
+                            <div class="exclusive-item-thumb">
+                                <a href="shop-details.html">
+                                    <img src="Trending this week/Sacco Shoe And Bag 1.jpg" alt=""
+                                        style="width: 100%; height: 100%;">
+                                    <img class="overlay-product-thumb" src="Trending this week/Sacco Shoe And Bag.jpg"
+                                        alt="" style="width: 100%; height: 100%;">
+                                </a>
+                                <ul class="action">
+                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="exclusive-item-content">
+                                <h5><a href="shop-details.html">Sacco Shoe And Bag</a></h5>
+                                <div class="exclusive--item--price">
+                                    <del class="old-price">$69.00</del>
+                                    <span class="new-price">$29.00</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-4 col-sm-6">
+                        <div class="exclusive-item exclusive-item-three text-center mb-40">
+                            <div class="exclusive-item-thumb">
+                                <a href="shop-details.html">
+                                    <img src="Trending this week/GOPRO MAX 360 Action Camera (1).jpg" alt=""
+                                        style="width: 100%; height: 100%;">
+                                    <img class="overlay-product-thumb"
+                                        src="Trending this week/GOPRO MAX 360 Action Camera .jpg" alt=""
+                                        style="width: 100%; height: 100%;">
+                                </a>
+                                <ul class="action">
+                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="exclusive-item-content">
+                                <h5><a href="shop-details.html">GOPRO MAX 360 Action Camera</a></h5>
+                                <div class="exclusive--item--price">
+                                    <del class="old-price">$69.00</del>
+                                    <span class="new-price">$58.00</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-4 col-sm-6">
+                        <div class="exclusive-item exclusive-item-three text-center mb-40">
+                            <div class="exclusive-item-thumb">
+                                <a href="shop-details.html">
+                                    <img src="Trending this week/Samsung Galaxy Buds2 Pro Wireless Earbud 1.jpg" alt=""
+                                        style="width: 100%; height: 100%;">
+                                    <img class="overlay-product-thumb"
+                                        src="Trending this week/Samsung Galaxy Buds2 Pro Wireless Earbud.jpg" alt=""
+                                        style="width: 100%; height: 100%;">
+                                </a>
+                                <ul class="action">
+                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="exclusive-item-content">
+                                <h5><a href="shop-details.html">Samsung Galaxy Buds2 Pro Wireless Earbud</a></h5>
+                                <div class="exclusive--item--price">
+                                    <del class="old-price">$49.00</del>
+                                    <span class="new-price">$21.00</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="exclusive-item exclusive-item-three text-center mb-40">
+                        <div class="exclusive-item-thumb">
+                            <a href="shop-details.html">
+                                <img src="Trending this week/Botton down gown.jpg" alt=""
+                                    style="width: 311.5px; height: 311.5px;">
+                                <img class="overlay-product-thumb" src="Trending this week/Botton down gown (2).jpg"
+                                    alt="" style="width: 311.5px; height: 311.5px;">
+                            </a>
+                            <ul class="action">
+                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="exclusive-item-content">
+                            <h5><a href="shop-details.html">Botton Down Gown</a></h5>
+                            <div class="exclusive--item--price">
+                                <del class="old-price">$69.00</del>
+                                <span class="new-price">$58.00</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="exclusive-item exclusive-item-three text-center mb-40">
+                        <div class="exclusive-item-thumb">
+                            <a href="shop-details.html">
+                                <img src="Trending this week/VEJARO D21 Office Lady Classy Party Long Sleeve Dress 1.jpg"
+                                    alt="" style="width: 311.5px; height: 311.5px;">
+                                <img class="overlay-product-thumb"
+                                    src="Trending this week/VEJARO D21 Office Lady Classy Party Long Sleeve Dress.jpg"
+                                    alt="" style="width: 311.5px; height: 311.5px;">
+                            </a>
+                            <ul class="action">
+                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="exclusive-item-content">
+                            <h5><a href="shop-details.html">VEJARO D21 Office Lady Classy Party Long Sleeve Dress</a>
+                            </h5>
+                            <div class="exclusive--item--price">
+                                <del class="old-price">$69.00</del>
+                                <span class="new-price">$29.00</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="exclusive-item exclusive-item-three text-center mb-40">
+                        <div class="exclusive-item-thumb">
+                            <a href="shop-details.html">
+                                <img src="Trending this week/Turkey Female Clothing Women Office Gowns 1 .jpg" alt=""
+                                    style="width: 311.5px; height: 311.5px;">
+                                <img class="overlay-product-thumb"
+                                    src="Trending this week/Turkey Female Clothing Women Office Gowns .jpg" alt=""
+                                    style="width: 311.5px; height: 311.5px;">
+                            </a>
+                            <ul class="action">
+                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="exclusive-item-content">
+                            <h5><a href="shop-details.html">Turkey Female Clothing Women Office Gowns</a></h5>
+                            <div class="exclusive--item--price">
+                                <del class="old-price">$69.00</del>
+                                <span class="new-price">$58.00</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="exclusive-item exclusive-item-three text-center mb-40">
+                        <div class="exclusive-item-thumb">
+                            <a href="shop-details.html">
+                                <img src="Trending this week/Mens Patterned Vintage T-shirts 1.jpg" alt=""
+                                    style="width: 311.5px; height: 311.5px;">
+                                <img class="overlay-product-thumb"
+                                    src="Trending this week/Mens Patterned Vintage T-shirts.jpg" alt=""
+                                    style="width: 311.5px; height: 311.5px;">
+                            </a>
+                            <ul class="action">
+                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="exclusive-item-content">
+                            <h5><a href="shop-details.html">Mens Patterned Vintage T-shirts</a></h5>
+                            <div class="exclusive--item--price">
+                                <del class="old-price">$49.00</del>
+                                <span class="new-price">$21.00</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- core-features -->
+        <section class="core-features-area core-features-style-two">
+            <div class="container">
+                <div class="core-features-border">
+                    <div class="item-spacing">
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="core-features-item mb-50">
+                                <div class="core-features-icon">
+                                    <img src="ico/core_features01.png" alt="" class="icon-spin">
+                                </div>
+                                <div class="core-features-content">
+                                    <h6>Free Shipping On Over $ 50</h6>
+                                    <span>Agricultural mean crops livestock</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="core-features-item mb-50">
+                                <div class="core-features-icon">
+                                    <img src="ico/core_features02.png" alt="" class="icon-spin">
+                                </div>
+                                <div class="core-features-content">
+                                    <h6>Membership Discount</h6>
+                                    <span>Only MemberAgricultural livestock</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="core-features-item mb-50">
+                                <div class="core-features-icon">
+                                    <img src="ico/core_features03.png" alt="" class="icon-spin">
+                                </div>
+                                <div class="core-features-content">
+                                    <h6>Money Return</h6>
+                                    <span>30 days money back guarantee</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="core-features-item mb-50">
+                                <div class="core-features-icon">
+                                    <img src="ico/core_features04.png" alt="" class="icon-spin">
+                                </div>
+                                <div class="core-features-content">
+                                    <h6>Online Support</h6>
+                                    <span>30 days money back guarantee</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <footer class="-pbm -fs12 -bg-gy7 -gy05">
+            <div class="-bg-gy9 -mbm">
+                <div class="custom-row -ptl">
+                    <div class="log" onclick="window.location.href='index.html';">
+                        <span class="big-dot"><i class="ri-circle-fill custom-circle"></i>
+                        </span>.Bot
+                    </div>
+                    <div class="col7 -df -d-co -j-bet">
+                        <div>
+                            <div class="f-t -pbs">New to Bot?</div>Subscribe to our newsletter to get updates on our
+                            latest offers!
+                        </div>
+                        <form method="post" id="nl-ft-f" action="/newsletter/subscription/default/" class="-pts">
+                            <div class="-df -i-start">
+                                <div class="fi-w _ic">
+                                    <input placeholder="Enter E-mail Address" required="" class="fi" type="email"
+                                        value="" id="fi-nl-ft-email" name="email" aria-label="E-mail">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ic" width="24"
+                                        height="24">
+                                        <path
+                                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                    </svg>
+                                </div>
+                                <div class="-df -pvs -plxs">
+                                    <button name="gender" value="male"
+                                        class="brd-btn _sqr -phl -mhxs">Male</button><button name="gender"
+                                        value="female" class="brd-btn _sqr -phl -mhxs">Female</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col4 -mla">
+                        <div class="-df">
+                            <div class="-plm">
+                                <div class="f-t -pbs">DOWNLOAD BOT FREE APP</div>
+                                Get access to exclusive offers!
+                            </div>
+                        </div>
+                        <div class="-df -ptm">
+                            <a href="index.html" title="Get it on the App Store"
+                                class="brd-btn _sqr ic-link -paxs -dif -mrs" target="_blank" rel="nofollow noopener"
+                                style="background-image: url('ico/apple_store.png'); width: 88px; height: 22px;">
+                                Get it on the App Store
+                            </a>
+                            <a href="index.html" title="Get it on Google Play"
+                                class="brd-btn _sqr ic-link -paxs -dif -mrs" target="_blank" rel="nofollow noopener"
+                                style="background-image: url('ico/google.png'); width: 93px; height: 22px;">
+                                Get it on Google Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line -pbl">
+                <div class="col4 -df -d-co -pvs">
+                    <span class="f-t -pbm">Need Help?</span>
+                    <ul class="-gy05 -pbxs -cp -ahf -tal" data-btn-lc="true" data-track-onclick="true"
+                        data-eventcategory="LiveChat" data-eventaction="open" data-eventlabel="footer"
+                        data-track-onclick-bound="true" style="margin-bottom: 0;">Chat with us
+                    </ul>
+                    <ul class="-lsn">
+                        <li>
+                            <a class="_link -pbxs" href="index.html" style="margin-top: -1em;">Help Center</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <span class="f-t -pvm">Useful Links</span>
+                    <ul class="-lsn">
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Service Center</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">How to shop on Bot?</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Delivery options and timelines</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">How to return a product on Bot?</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Corporate and bulk purchases</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Report a Product</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Dispute Resolution Policy</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Returns &amp; Refund Timeline</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Return Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col4 -df -d-co -pvs">
+                    <span class="f-t -pbm">ABOUT BOT</span>
+                    <ul class="-lsn">
+                        <li>
+                            <a class="_link -pbxs" href="index.html">About us</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Bot careers</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Bot Express</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Terms and Conditions</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Privacy Notice</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="index.html">Bot Store Credit Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Bot Payment Information Guidelines</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Cookie Notice</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Bot Global</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Official Stores</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Flash Sales</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col4 -df -d-co -pvs">
+                    <span class="f-t -pbm">MAKE MONEY WITH BOT</span>
+                    <ul class="-lsn">
+                        <li>
+                            <a class="_link -pbxs" href="">Sell on Bot</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Vendor hub</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Become a Sales Consultant</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Become a Logistics Service Partner</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Join the BOT DA Academy</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Join the BOT KOL Program</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col4 rw -c-start -pvs">
+                    <span class="f-t col16 -pbm">BOT INTERNATIONAL</span>
+                    <ul class="col5 -df -d-co -lsn">
+                        <li>
+                            <a class="_link -pbxs" href="">France</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">United-Kingdom</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Ghana</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Ivory Coast</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Kenya</a>
+                        </li>
+                    </ul>
+                    <ul class="col5 -df -d-co -lsn -rgt">
+                        <li>
+                            <a class="_link -pbxs" href="">Morocco</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Senegal</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Tunisia</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Uganda</a>
+                        </li>
+                        <li>
+                            <a class="_link -pbxs" href="">Nigeria</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row -pbl">
+                <div class="col4 row">
+                    <div class="joi-us">JOIN US ON</div>
+                    <div class="col16 -phn -fs0">
+                        <a href="" title="Facebook BOT" class="ic-link -pas" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="ic" width="26"
+                                height="26">
+                                <path
+                                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                            </svg>
+                        </a>
+                        <a href="" title="YouTube BOT" class="ic-link -pas" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="ic" width="26"
+                                height="26">
+                                <path
+                                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                            </svg>
+                        </a>
+                        <a href="" title="Instagram BOT" class="ic-link -pas" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ic" width="26"
+                                height="26">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+
+                        </a>
+                        <a href="" title="Live Help on X" class="ic-link -pas" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ic" width="26"
+                                height="26">
+                                <path
+                                    d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col12 row">
+                    <div class="paymt">PAYMENT METHODS &amp; DELIVERY PARTNERS</div>
+                    <div class="col16 -phn -df -fw-w -fs0">
+                        <a href="" title="Payment on delivery" class="ic-link -pas">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="ic" width="24"
+                                height="24">
+                                <path
+                                    d="M312 24V34.5c6.4 1.2 12.6 2.7 18.2 4.2c12.8 3.4 20.4 16.6 17 29.4s-16.6 20.4-29.4 17c-10.9-2.9-21.1-4.9-30.2-5c-7.3-.1-14.7 1.7-19.4 4.4c-2.1 1.3-3.1 2.4-3.5 3c-.3 .5-.7 1.2-.7 2.8c0 .3 0 .5 0 .6c.2 .2 .9 1.2 3.3 2.6c5.8 3.5 14.4 6.2 27.4 10.1l.9 .3c11.1 3.3 25.9 7.8 37.9 15.3c13.7 8.6 26.1 22.9 26.4 44.9c.3 22.5-11.4 38.9-26.7 48.5c-6.7 4.1-13.9 7-21.3 8.8V232c0 13.3-10.7 24-24 24s-24-10.7-24-24V220.6c-9.5-2.3-18.2-5.3-25.6-7.8c-2.1-.7-4.1-1.4-6-2c-12.6-4.2-19.4-17.8-15.2-30.4s17.8-19.4 30.4-15.2c2.6 .9 5 1.7 7.3 2.5c13.6 4.6 23.4 7.9 33.9 8.3c8 .3 15.1-1.6 19.2-4.1c1.9-1.2 2.8-2.2 3.2-2.9c.4-.6 .9-1.8 .8-4.1l0-.2c0-1 0-2.1-4-4.6c-5.7-3.6-14.3-6.4-27.1-10.3l-1.9-.6c-10.8-3.2-25-7.5-36.4-14.4c-13.5-8.1-26.5-22-26.6-44.1c-.1-22.9 12.9-38.6 27.7-47.4c6.4-3.8 13.3-6.4 20.2-8.2V24c0-13.3 10.7-24 24-24s24 10.7 24 24zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5H192 32c-17.7 0-32-14.3-32-32V416c0-17.7 14.3-32 32-32H68.8l44.9-36c22.7-18.2 50.9-28 80-28H272h16 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H288 272c-8.8 0-16 7.2-16 16s7.2 16 16 16H392.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384l0 0-.9 0c.3 0 .6 0 .9 0z" />
+                            </svg>
+                        </a>
+                        <a href="" title="Mastercard" class="ic-link -pas">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="ic" width="36"
+                                height="24">
+                                <path
+                                    d="M482.9 410.3c0 6.8-4.6 11.7-11.2 11.7-6.8 0-11.2-5.2-11.2-11.7 0-6.5 4.4-11.7 11.2-11.7 6.6 0 11.2 5.2 11.2 11.7zm-310.8-11.7c-7.1 0-11.2 5.2-11.2 11.7 0 6.5 4.1 11.7 11.2 11.7 6.5 0 10.9-4.9 10.9-11.7-.1-6.5-4.4-11.7-10.9-11.7zm117.5-.3c-5.4 0-8.7 3.5-9.5 8.7h19.1c-.9-5.7-4.4-8.7-9.6-8.7zm107.8 .3c-6.8 0-10.9 5.2-10.9 11.7 0 6.5 4.1 11.7 10.9 11.7 6.8 0 11.2-4.9 11.2-11.7 0-6.5-4.4-11.7-11.2-11.7zm105.9 26.1c0 .3 .3 .5 .3 1.1 0 .3-.3 .5-.3 1.1-.3 .3-.3 .5-.5 .8-.3 .3-.5 .5-1.1 .5-.3 .3-.5 .3-1.1 .3-.3 0-.5 0-1.1-.3-.3 0-.5-.3-.8-.5-.3-.3-.5-.5-.5-.8-.3-.5-.3-.8-.3-1.1 0-.5 0-.8 .3-1.1 0-.5 .3-.8 .5-1.1 .3-.3 .5-.3 .8-.5 .5-.3 .8-.3 1.1-.3 .5 0 .8 0 1.1 .3 .5 .3 .8 .3 1.1 .5s.2 .6 .5 1.1zm-2.2 1.4c.5 0 .5-.3 .8-.3 .3-.3 .3-.5 .3-.8 0-.3 0-.5-.3-.8-.3 0-.5-.3-1.1-.3h-1.6v3.5h.8V426h.3l1.1 1.4h.8l-1.1-1.3zM576 81v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V81c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM64 220.6c0 76.5 62.1 138.5 138.5 138.5 27.2 0 53.9-8.2 76.5-23.1-72.9-59.3-72.4-171.2 0-230.5-22.6-15-49.3-23.1-76.5-23.1-76.4-.1-138.5 62-138.5 138.2zm224 108.8c70.5-55 70.2-162.2 0-217.5-70.2 55.3-70.5 162.6 0 217.5zm-142.3 76.3c0-8.7-5.7-14.4-14.7-14.7-4.6 0-9.5 1.4-12.8 6.5-2.4-4.1-6.5-6.5-12.2-6.5-3.8 0-7.6 1.4-10.6 5.4V392h-8.2v36.7h8.2c0-18.9-2.5-30.2 9-30.2 10.2 0 8.2 10.2 8.2 30.2h7.9c0-18.3-2.5-30.2 9-30.2 10.2 0 8.2 10 8.2 30.2h8.2v-23zm44.9-13.7h-7.9v4.4c-2.7-3.3-6.5-5.4-11.7-5.4-10.3 0-18.2 8.2-18.2 19.3 0 11.2 7.9 19.3 18.2 19.3 5.2 0 9-1.9 11.7-5.4v4.6h7.9V392zm40.5 25.6c0-15-22.9-8.2-22.9-15.2 0-5.7 11.9-4.8 18.5-1.1l3.3-6.5c-9.4-6.1-30.2-6-30.2 8.2 0 14.3 22.9 8.3 22.9 15 0 6.3-13.5 5.8-20.7 .8l-3.5 6.3c11.2 7.6 32.6 6 32.6-7.5zm35.4 9.3l-2.2-6.8c-3.8 2.1-12.2 4.4-12.2-4.1v-16.6h13.1V392h-13.1v-11.2h-8.2V392h-7.6v7.3h7.6V416c0 17.6 17.3 14.4 22.6 10.9zm13.3-13.4h27.5c0-16.2-7.4-22.6-17.4-22.6-10.6 0-18.2 7.9-18.2 19.3 0 20.5 22.6 23.9 33.8 14.2l-3.8-6c-7.8 6.4-19.6 5.8-21.9-4.9zm59.1-21.5c-4.6-2-11.6-1.8-15.2 4.4V392h-8.2v36.7h8.2V408c0-11.6 9.5-10.1 12.8-8.4l2.4-7.6zm10.6 18.3c0-11.4 11.6-15.1 20.7-8.4l3.8-6.5c-11.6-9.1-32.7-4.1-32.7 15 0 19.8 22.4 23.8 32.7 15l-3.8-6.5c-9.2 6.5-20.7 2.6-20.7-8.6zm66.7-18.3H408v4.4c-8.3-11-29.9-4.8-29.9 13.9 0 19.2 22.4 24.7 29.9 13.9v4.6h8.2V392zm33.7 0c-2.4-1.2-11-2.9-15.2 4.4V392h-7.9v36.7h7.9V408c0-11 9-10.3 12.8-8.4l2.4-7.6zm40.3-14.9h-7.9v19.3c-8.2-10.9-29.9-5.1-29.9 13.9 0 19.4 22.5 24.6 29.9 13.9v4.6h7.9v-51.7zm7.6-75.1v4.6h.8V302h1.9v-.8h-4.6v.8h1.9zm6.6 123.8c0-.5 0-1.1-.3-1.6-.3-.3-.5-.8-.8-1.1-.3-.3-.8-.5-1.1-.8-.5 0-1.1-.3-1.6-.3-.3 0-.8 .3-1.4 .3-.5 .3-.8 .5-1.1 .8-.5 .3-.8 .8-.8 1.1-.3 .5-.3 1.1-.3 1.6 0 .3 0 .8 .3 1.4 0 .3 .3 .8 .8 1.1 .3 .3 .5 .5 1.1 .8 .5 .3 1.1 .3 1.4 .3 .5 0 1.1 0 1.6-.3 .3-.3 .8-.5 1.1-.8 .3-.3 .5-.8 .8-1.1 .3-.6 .3-1.1 .3-1.4zm3.2-124.7h-1.4l-1.6 3.5-1.6-3.5h-1.4v5.4h.8v-4.1l1.6 3.5h1.1l1.4-3.5v4.1h1.1v-5.4zm4.4-80.5c0-76.2-62.1-138.3-138.5-138.3-27.2 0-53.9 8.2-76.5 23.1 72.1 59.3 73.2 171.5 0 230.5 22.6 15 49.5 23.1 76.5 23.1 76.4 .1 138.5-61.9 138.5-138.4z" />
+                            </svg>
+                        </a>
+                        <a href="" title="Visa" class="ic-link -pas">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="ic" width="31"
+                                height="24">
+                                <path
+                                    d="M470.1 231.3s7.6 37.2 9.3 45H446c3.3-8.9 16-43.5 16-43.5-.2 .3 3.3-9.1 5.3-14.9l2.8 13.4zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM152.5 331.2L215.7 176h-42.5l-39.3 106-4.3-21.5-14-71.4c-2.3-9.9-9.4-12.7-18.2-13.1H32.7l-.7 3.1c15.8 4 29.9 9.8 42.2 17.1l35.8 135h42.5zm94.4 .2L272.1 176h-40.2l-25.1 155.4h40.1zm139.9-50.8c.2-17.7-10.6-31.2-33.7-42.3-14.1-7.1-22.7-11.9-22.7-19.2 .2-6.6 7.3-13.4 23.1-13.4 13.1-.3 22.7 2.8 29.9 5.9l3.6 1.7 5.5-33.6c-7.9-3.1-20.5-6.6-36-6.6-39.7 0-67.6 21.2-67.8 51.4-.3 22.3 20 34.7 35.2 42.2 15.5 7.6 20.8 12.6 20.8 19.3-.2 10.4-12.6 15.2-24.1 15.2-16 0-24.6-2.5-37.7-8.3l-5.3-2.5-5.6 34.9c9.4 4.3 26.8 8.1 44.8 8.3 42.2 .1 69.7-20.8 70-53zM528 331.4L495.6 176h-31.1c-9.6 0-16.9 2.8-21 12.9l-59.7 142.5H426s6.9-19.2 8.4-23.3H486c1.2 5.5 4.8 23.3 4.8 23.3H528z" />
+                            </svg>
+                        </a>
+                        <a href="" title="Paypal" class="ic-link -pas">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="ic" width="42"
+                                height="24">
+                                <path
+                                    d="M186.3 258.2c0 12.2-9.7 21.5-22 21.5-9.2 0-16-5.2-16-15 0-12.2 9.5-22 21.7-22 9.3 0 16.3 5.7 16.3 15.5zM80.5 209.7h-4.7c-1.5 0-3 1-3.2 2.7l-4.3 26.7 8.2-.3c11 0 19.5-1.5 21.5-14.2 2.3-13.4-6.2-14.9-17.5-14.9zm284 0H360c-1.8 0-3 1-3.2 2.7l-4.2 26.7 8-.3c13 0 22-3 22-18-.1-10.6-9.6-11.1-18.1-11.1zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM128.3 215.4c0-21-16.2-28-34.7-28h-40c-2.5 0-5 2-5.2 4.7L32 294.2c-.3 2 1.2 4 3.2 4h19c2.7 0 5.2-2.9 5.5-5.7l4.5-26.6c1-7.2 13.2-4.7 18-4.7 28.6 0 46.1-17 46.1-45.8zm84.2 8.8h-19c-3.8 0-4 5.5-4.2 8.2-5.8-8.5-14.2-10-23.7-10-24.5 0-43.2 21.5-43.2 45.2 0 19.5 12.2 32.2 31.7 32.2 9 0 20.2-4.9 26.5-11.9-.5 1.5-1 4.7-1 6.2 0 2.3 1 4 3.2 4H200c2.7 0 5-2.9 5.5-5.7l10.2-64.3c.3-1.9-1.2-3.9-3.2-3.9zm40.5 97.9l63.7-92.6c.5-.5 .5-1 .5-1.7 0-1.7-1.5-3.5-3.2-3.5h-19.2c-1.7 0-3.5 1-4.5 2.5l-26.5 39-11-37.5c-.8-2.2-3-4-5.5-4h-18.7c-1.7 0-3.2 1.8-3.2 3.5 0 1.2 19.5 56.8 21.2 62.1-2.7 3.8-20.5 28.6-20.5 31.6 0 1.8 1.5 3.2 3.2 3.2h19.2c1.8-.1 3.5-1.1 4.5-2.6zm159.3-106.7c0-21-16.2-28-34.7-28h-39.7c-2.7 0-5.2 2-5.5 4.7l-16.2 102c-.2 2 1.3 4 3.2 4h20.5c2 0 3.5-1.5 4-3.2l4.5-29c1-7.2 13.2-4.7 18-4.7 28.4 0 45.9-17 45.9-45.8zm84.2 8.8h-19c-3.8 0-4 5.5-4.3 8.2-5.5-8.5-14-10-23.7-10-24.5 0-43.2 21.5-43.2 45.2 0 19.5 12.2 32.2 31.7 32.2 9.3 0 20.5-4.9 26.5-11.9-.3 1.5-1 4.7-1 6.2 0 2.3 1 4 3.2 4H484c2.7 0 5-2.9 5.5-5.7l10.2-64.3c.3-1.9-1.2-3.9-3.2-3.9zm47.5-33.3c0-2-1.5-3.5-3.2-3.5h-18.5c-1.5 0-3 1.2-3.2 2.7l-16.2 104-.3 .5c0 1.8 1.5 3.5 3.5 3.5h16.5c2.5 0 5-2.9 5.2-5.7L544 191.2v-.3zm-90 51.8c-12.2 0-21.7 9.7-21.7 22 0 9.7 7 15 16.2 15 12 0 21.7-9.2 21.7-21.5 .1-9.8-6.9-15.5-16.2-15.5z" />
+                            </svg>
+                        </a>
+                        <a href="DHL" class="ic-link -pas" style="margin-top: -1em;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="ic" width="80"
+                                height="60">
+                                <path
+                                    d="M238 301.2h58.7L319 271h-58.7L238 301.2zM0 282.9v6.4h81.8l4.7-6.4H0zM172.9 271c-8.7 0-6-3.6-4.6-5.5 2.8-3.8 7.6-10.4 10.4-14.1 2.8-3.7 2.8-5.9-2.8-5.9h-51l-41.1 55.8h100.1c33.1 0 51.5-22.5 57.2-30.3h-68.2zm317.5-6.9l39.3-53.4h-62.2l-39.3 53.4h62.2zM95.3 271H0v6.4h90.6l4.7-6.4zm111-26.6c-2.8 3.8-7.5 10.4-10.3 14.2-1.4 2-4.1 5.5 4.6 5.5h45.6s7.3-10 13.5-18.4c8.4-11.4 .7-35-29.2-35H112.6l-20.4 27.8h111.4c5.6 0 5.5 2.2 2.7 5.9zM0 301.2h73.1l4.7-6.4H0v6.4zm323 0h58.7L404 271h-58.7c-.1 0-22.3 30.2-22.3 30.2zm222 .1h95v-6.4h-90.3l-4.7 6.4zm22.3-30.3l-4.7 6.4H640V271h-72.7zm-13.5 18.3H640v-6.4h-81.5l-4.7 6.4zm-164.2-78.6l-22.5 30.6h-26.2l22.5-30.6h-58.7l-39.3 53.4H409l39.3-53.4h-58.7zm33.5 60.3s-4.3 5.9-6.4 8.7c-7.4 10-.9 21.6 23.2 21.6h94.3l22.3-30.3H423.1z" />
+                            </svg>
+                        </a>
+                        <a href="FEDEX" class="ic-link -pas" style="margin-top: -0.5em;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="ic" width="50"
+                                height="40">
+                                <path
+                                    d="M586 284.5l53.3-59.9h-62.4l-21.7 24.8-22.5-24.8H414v-16h56.1v-48.1H318.9V236h-.5c-9.6-11-21.5-14.8-35.4-14.8-28.4 0-49.8 19.4-57.3 44.9-18-59.4-97.4-57.6-121.9-14v-24.2H49v-26.2h60v-41.1H0V345h49v-77.5h48.9c-1.5 5.7-2.3 11.8-2.3 18.2 0 73.1 102.6 91.4 130.2 23.7h-42c-14.7 20.9-45.8 8.9-45.8-14.6h85.5c3.7 30.5 27.4 56.9 60.1 56.9 14.1 0 27-6.9 34.9-18.6h.5V345h212.2l22.1-25 22.3 25H640l-54-60.5zm-446.7-16.6c6.1-26.3 41.7-25.6 46.5 0h-46.5zm153.4 48.9c-34.6 0-34-62.8 0-62.8 32.6 0 34.5 62.8 0 62.8zm167.8 19.1h-94.4V169.4h95v30.2H405v33.9h55.5v28.1h-56.1v44.7h56.1v29.6zm-45.9-39.8v-24.4h56.1v-44l50.7 57-50.7 57v-45.6h-56.1zm138.6 10.3l-26.1 29.5H489l45.6-51.2-45.6-51.2h39.7l26.6 29.3 25.6-29.3h38.5l-45.4 51 46 51.4h-40.5l-26.3-29.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </footer>
+    <!-- footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="swiper.min.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>
